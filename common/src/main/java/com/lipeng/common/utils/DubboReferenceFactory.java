@@ -76,7 +76,7 @@ public class DubboReferenceFactory {
         // 引用远程服务
         ReferenceConfig<T> reference = new ReferenceConfig<T>();
         // 当前应用配置
-        reference.setApplication(applicationConfig);
+        //reference.setApplication(applicationConfig);
         // 消费端配置
         if (customConsumerConfig != null) {
             ConsumerConfig c = new ConsumerConfig();

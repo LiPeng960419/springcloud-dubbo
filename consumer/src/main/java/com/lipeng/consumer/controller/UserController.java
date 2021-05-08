@@ -39,6 +39,8 @@ public class UserController {
     @GetMapping("/utils/gray/{id}")
     public String utils(@PathVariable Long id) {
         UserService dubboBean = DubboReferenceUtils.getDubboBean(UserService.class);
+        UserService dubboBean1 = DubboReferenceUtils.getDubboBean("1.0.0", UserService.class, true);
+        System.out.println(dubboBean1.getUser(id));
         return dubboBean.getUser(id);
     }
 

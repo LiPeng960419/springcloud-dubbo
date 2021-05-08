@@ -83,7 +83,7 @@ public class DubboReferenceUtils implements InitializingBean {
             // 引用远程服务
             ReferenceConfig<T> reference = new ReferenceConfig<T>();
             // 当前应用配置
-            reference.setApplication(applicationConfig);
+            //reference.setApplication(applicationConfig);
             // 消费端配置
             reference.setConsumer(consumerConfig);
             // 多个注册中心可以用setRegistries()
@@ -105,7 +105,7 @@ public class DubboReferenceUtils implements InitializingBean {
     public static Object genericInvoke(Class interfaceClass, String dubboVersion, boolean isGray, String methodName, List<Map<String, Object>> parameters) {
         // 用com.alibaba.dubbo.rpc.service.GenericService可以替代所有接口引用
         ReferenceConfig<GenericService> reference = new ReferenceConfig<GenericService>();
-        reference.setApplication(applicationConfig);
+        //reference.setApplication(applicationConfig);
         reference.setConsumer(consumerConfig);
         reference.setRegistry(isGray ? grayRegistryConfig : prodRegistryConfig);
         reference.setInterface(interfaceClass); // 接口名
@@ -166,7 +166,7 @@ public class DubboReferenceUtils implements InitializingBean {
 
     private static ReferenceConfig<GenericService> newRefConifg(String interfaceClass, String version, boolean isGray) {
         ReferenceConfig<GenericService> reference = new ReferenceConfig<GenericService>();
-        reference.setApplication(applicationConfig);
+        //reference.setApplication(applicationConfig);
         reference.setConsumer(consumerConfig);
         reference.setRegistry(isGray ? grayRegistryConfig : prodRegistryConfig);
         reference.setInterface(interfaceClass);
