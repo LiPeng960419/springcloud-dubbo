@@ -1,0 +1,7 @@
+app:
+  id: provider-demo
+apollo:
+  bootstrap:
+    enabled: true
+  meta: http://127.0.0.1:8080
+env: DEV

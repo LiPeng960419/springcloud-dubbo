@@ -2,10 +2,10 @@ package com.lipeng.provider.service;
 
 import com.lipeng.common.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 
 @Slf4j
-@Service
+@DubboService
 public class UserServiceImpl implements UserService {
 
     @Override
